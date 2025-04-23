@@ -56,8 +56,8 @@ const Index = () => {
       className={`${myFont.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
     >
       <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white'>All In One Assessment Project</h1>
-      <main className="flex overflow-hidden flex-col gap-8 row-start-2 items-center sm:items-start border border-[#26272C] rounded-2xl">
-        <div className=' flex w-full items-center justify-between h-16 p-2 bg-[#1D1E22]'>
+      <main className="flex min-w-[70%] overflow-hidden flex-col gap-8 row-start-2 items-center sm:items-start border border-[#26272C] rounded-2xl">
+        <div className='grid sm:flex w-full items-center justify-between h-28 sm:h-16 p-2 bg-[#1D1E22]'>
           <Search onChange={handleSearch} />
           <div className='pr-4'>
             <Dropdown title='Provider' options={gameProviders} onClick={(type) => sameProvider(type)} />
@@ -67,7 +67,7 @@ const Index = () => {
         <div className="flex px-6 pb-6 gap-4 items-center flex-col sm:flex-row">
           <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4">
             {searchMode && arr.length > 0 ? arr.map((item: IItem, index: number) => <Card key={index} item={item} />)
-              : searchMode && arr.length == 0 ? <p>No results...</p>
+              : searchMode && arr.length == 0 ? <h2 className='p-10 w-full font-black text-xl'>No Results...</h2>
                 : games.map((item, index) => <Card key={index} item={item} />)}
           </div>
         </div>
