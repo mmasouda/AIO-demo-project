@@ -27,8 +27,8 @@ export const Card = ({ item }: { item: IItem }) => {
             </div>
             {openEdit &&
                 <Modal title={item.fullName} onClose={() => setOpenEdit(false)}>
-                    <div className="w-full sm:w-[640px] p-4 md:p-5">
-                        <div className="grid sm:flex justify-center">
+                    <div className="w-full sm:w-[640px] md:p-5">
+                        <div className="grid sm:flex justify-center h-[680px] sm:h-auto">
                             <div className="mx-auto mb-4 w-[200px] h-[265px]">
                                 <Image
                                     src={item.thumbnail}
