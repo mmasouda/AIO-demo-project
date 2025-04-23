@@ -10,7 +10,7 @@ export const Search = ({ onChange }: { onChange: ChangeEventHandler<HTMLInputEle
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                 </div>
-                <input onChange={onChange} type="search" id="default-search" className="block h-[40px] w-full bg-[black] p-4 ps-10 text-sm border border-gray-300 color-[white] rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Games..." required />
+                <input style={{ backgroundColor: "#303238" }} onChange={onChange} type="search" id="default-search" className="block h-[40px] w-full p-4 ps-10 text-sm border border-gray-300 color-[white] rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Games..." required />
             </div>
         </form>
     )
